@@ -1,0 +1,8 @@
+#FAVRUN myexample - do alist
+ls -l
+#FAVRUN myexample2
+echo $HOME
+#FAVRUN myexample3
+cd $HOME
+#FAVRUN myexample4
+echo hi
