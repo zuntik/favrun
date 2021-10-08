@@ -13,7 +13,7 @@ __favrun_iterate() {
 
     # https://stackoverflow.com/a/12919766/6817191
     while read line || [ -n "$line" ]; do
-        if [[ $line =~ "^#FAVRUN \b$2\b" ]]
+        if [[ $line =~ "^#FAVRUN[[:space:]]+\b$2\b" ]]
         then
             if $found
             then
@@ -64,9 +64,8 @@ favrun() {
 
     # https://www.shellscript.sh/tips/getopt/
     local parsed_arguments=$(getopt -a -n favrun -o c:f:s --long command:,file:,save, -- "$@")
-    if [ "$valid_arguments" != "0" ]; then
-        __favrun_usage
-    fi
+    [ "$valid_arguments" != "0" ] && __favrun_usage
+
     eval set -- "$parsed_arguments"
     
     while :

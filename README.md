@@ -17,7 +17,7 @@ For instance, I had a file that looked like this:
 `commands.txt`
 ```text
 # get root
-http POST localhost:5000/api/users < user1.json
+http localhost:5000/
 # authed request
 http localhost:5000/api/auth x-auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.dyt0CoTl4WoVjAHI9Q_CwSKhl6d_9rhM3NrXuJttkao
 ```
